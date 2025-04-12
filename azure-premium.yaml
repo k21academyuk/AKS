@@ -4,8 +4,8 @@ metadata:
   name: azure-managed-disk
 spec:
   accessModes:
-  - ReadWriteOnce
-  storageClassName: managed-premium
+    - ReadWriteOnce  # Means only one application can use this at a time
   resources:
     requests:
-      storage: 5Gi
+      storage: 5Gi  # Requesting 5GB of storage
+  storageClassName: managed-premium  # Type of storage (premium SSD)
